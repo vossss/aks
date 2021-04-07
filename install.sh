@@ -27,7 +27,7 @@ helm init --kubeconfig ./kubeconfig --client-only --stable-repo-url http://mirro
 
 helm repo add minio https://helm.min.io/
 helm repo update
-helm install --namespace minio upgrade minio minio/minio --tiller-namespace=kube-system 
+helm install --namespace=minio minio minio/minio --tiller-namespace=kube-system 
 
 # helm --kubeconfig ./kubeconfig upgrade certmanager master/h-109-cert-manager --tiller-namespace=kube-system \
 #    --version v0.10.1 \
