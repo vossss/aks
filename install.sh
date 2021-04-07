@@ -10,6 +10,8 @@ ls -lR
 
 cd kubeconfig
 
+xport KUBECONFIG=`pwd`/kubeconfig
+
 wget https://github.com/Azure/kubelogin/releases/download/v0.0.9/kubelogin-linux-amd64.zip
 unzip kubelogin-linux-amd64.zip
 cp bin/linux_amd64/kubelogin /usr/local/bin/
@@ -24,6 +26,7 @@ helm repo add master https://mbbservicepreprod.azurecr.cn/helm/v1/repo --usernam
 helm repo update
 
 helm --kubeconfig ./kubeconfig upgrade certmanager master/h-109-cert-manager --tiller-namespace=kube-system \
+    --version v0.10.1 \
     --set image.repository=mbbservicepreprod.azurecr.cn/certmanager/cert-manager-controller \
     --set image.tag=v0.10.1 \
     --install --namespace default
