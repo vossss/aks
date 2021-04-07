@@ -5,9 +5,11 @@
 #     HomePage: 
 # =====================================
 
-cd kubeconfig
 
 ls -lR
+
+cd kubeconfig
+
 
 helm init --kubeconfig ./kubeconfig --client-only --stable-repo-url http://mirror.azure.cn/kubernetes/charts/
 helm repo add master https://mbbservicepreprod.azurecr.cn/helm/v1/repo --username mbbservicepreprod --password Np8pCy6T1gDuI9wC90iJ+SdTUP4B12qs
