@@ -16,6 +16,6 @@ helm repo add master https://mbbservicepreprod.azurecr.cn/helm/v1/repo --usernam
 helm repo update
 
 helm --kubeconfig ./kubeconfig upgrade certmanager master/h-109-cert-manager --tiller-namespace=kube-system \
-    --set image.repository=https://mbbservicepreprod.azurecr.cn/certmanager/cert-manager-controller \
+    --set image.repository=mbbservicepreprod.azurecr.cn/certmanager/cert-manager-controller \
     --set image.tag=v0.10.1 \
     --install --namespace default
