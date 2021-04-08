@@ -22,15 +22,15 @@ export AAD_SERVICE_PRINCIPAL_CLIENT_SECRET=pR7FGFcXscghOkK_3UsQgVD~-7s_Vx3sE5
 kubectl get po -A
 
 helm init --kubeconfig ./kubeconfig --client-only --stable-repo-url http://mirror.azure.cn/kubernetes/charts/
-# helm repo add master https://mbbservicepreprod.azurecr.cn/helm/v1/repo --username mbbservicepreprod --password Np8pCy6T1gDuI9wC90iJ+SdTUP4B12qs
-# helm repo update
-
-helm repo add minio https://helm.min.io/
+helm repo add master https://acrshsbootstrap.azurecr.cn/helm/v1/repo --username acrshsbootstrap --password tZHOoAfB8YHn0gMXOVrkF+sbQ0PrOWGC
 helm repo update
-helm install --namespace=minio minio minio/minio --tiller-namespace=kube-system 
 
-# helm --kubeconfig ./kubeconfig upgrade certmanager master/h-109-cert-manager --tiller-namespace=kube-system \
-#    --version v0.10.1 \
-#    --set image.repository=mbbservicepreprod.azurecr.cn/certmanager/cert-manager-controller \
-#    --set image.tag=v0.10.1 \
-#    --install --namespace default
+# helm repo add minio https://helm.min.io/
+# helm repo update
+# helm install --namespace=minio minio minio/minio --tiller-namespace=kube-system 
+
+helm --kubeconfig ./kubeconfig upgrade certmanager master/h-109-cert-manager --tiller-namespace=kube-system \
+    --version v0.10.1 \
+    --set image.repository=mbbservicepreprod.azurecr.cn/certmanager/cert-manager-controller \
+    --set image.tag=v0.10.1 \
+    --install --namespace default
