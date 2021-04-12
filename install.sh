@@ -22,7 +22,7 @@ export AAD_SERVICE_PRINCIPAL_CLIENT_SECRET=pR7FGFcXscghOkK_3UsQgVD~-7s_Vx3sE5
 kubectl get po -A
 
 helm init --kubeconfig ./kubeconfig --client-only --stable-repo-url http://mirror.azure.cn/kubernetes/charts/
-helm repo add master https://acrshsbootstrap.azurecr.cn/helm/v1/repo --username acrshsbootstrap --password tZHOoAfB8YHn0gMXOVrkF+sbQ0PrOWGC
+helm repo add master https://acrshsbootstrap.azurecr.cn/helm/v1/repo --username xxxxx --password xxxxxxx+sbQ0PrOWGC
 helm repo update
 
 # helm repo add minio https://helm.min.io/
