@@ -18,8 +18,8 @@ wget https://github.com/Azure/kubelogin/releases/download/v0.0.9/kubelogin-linux
 unzip kubelogin-linux-amd64.zip
 cp bin/linux_amd64/kubelogin /usr/local/bin/
 
-export AAD_SERVICE_PRINCIPAL_CLIENT_ID=95a7ff7c-dd2b-4ce7-8bef-9b668e4703bb
-export AAD_SERVICE_PRINCIPAL_CLIENT_SECRET=pR7FGFcXscghOkK_3UsQgVD~-7s_Vx3sE5
+export AAD_SERVICE_PRINCIPAL_CLIENT_ID=xxxxxxxxx
+export AAD_SERVICE_PRINCIPAL_CLIENT_SECRET=xxxxxxxxxxxxxxx
 
 kubectl get po -A
 
