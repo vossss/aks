@@ -10,6 +10,8 @@ ls -lR
 
 cd kubeconfig
 
+pwd
+
 export KUBECONFIG=`pwd`/kubeconfig
 
 wget https://github.com/Azure/kubelogin/releases/download/v0.0.9/kubelogin-linux-amd64.zip
